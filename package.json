@@ -2,7 +2,7 @@
     "name": "mov-ticket-root",
     "version": "1.0.0",
     "scripts": {
-        "start": "node backend/index.js",
+        "start": "node backend/server.js",
         "server": "cd backend && npm run dev",
         "client": "cd frontend && npm run dev",
         "seed": "cd backend && npm run seed",
