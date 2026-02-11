@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: "https://movieticketbooking-h5u5.onrender.com/api" || 'http://localhost:5000/api',
+    baseURL: "https://movieticket-v4hi.onrender.com/api" || 'http://localhost:5000/api',
 });
 
 api.interceptors.request.use((config) => {
