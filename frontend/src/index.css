@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Outfit', sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-netflix-dark text-white overflow-x-hidden;
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-netflix-black bg-opacity-40 backdrop-blur-lg border border-white border-opacity-10 rounded-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-netflix-red hover:bg-[#b00710] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform active:scale-95 shadow-lg shadow-netflix-red/20;
+  }
+
+  .input-field {
+    @apply bg-netflix-black border border-netflix-gray/30 focus:border-netflix-red outline-none px-4 py-3 rounded-lg w-full transition-all;
+  }
+
+  .movie-card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-netflix-red/10;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E50914;
+}
+
+/* React Datepicker Custom Styles */
+.react-datepicker {
+  @apply font-sans bg-netflix-black border border-white/10 rounded-xl shadow-2xl;
+  font-family: 'Outfit', sans-serif !important;
+}
+
+.react-datepicker__header {
+  @apply bg-netflix-dark border-b border-white/10 rounded-t-xl pt-4;
+}
+
+.react-datepicker__current-month {
+  @apply text-white font-bold mb-2 uppercase tracking-wider;
+}
+
+.react-datepicker__day-name {
+  @apply text-netflix-gray font-medium;
+}
+
+.react-datepicker__day {
+  @apply text-gray-300 hover:bg-white/10 hover:text-white rounded-full transition-colors;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  @apply bg-netflix-red text-white font-bold hover:bg-red-700 !important;
+}
+
+.react-datepicker__day--today {
+  @apply text-netflix-red font-bold;
+}
+
+.react-datepicker__day--disabled {
+  @apply text-gray-700 hover:bg-transparent cursor-not-allowed opacity-30;
+}
+
+.react-datepicker__navigation-icon::before {
+  @apply border-white/50 hover:border-white transition-colors;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
