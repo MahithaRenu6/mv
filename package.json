@@ -2,13 +2,10 @@
     "name": "mov-ticket-root",
     "version": "1.0.0",
     "scripts": {
-        "start": "concurrently \"npm run server\" \"npm run client\"",
+        "start": "node backend/server.js",
         "server": "cd backend && npm run dev",
         "client": "cd frontend && npm run dev",
         "seed": "cd backend && npm run seed",
         "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
-    },
-    "dependencies": {
-        "concurrently": "^9.2.1"
     }
 }
