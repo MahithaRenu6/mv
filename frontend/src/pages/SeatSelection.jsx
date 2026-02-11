@@ -7,7 +7,7 @@ import { toast } from 'react-hot-toast';
 import { Trash2, Smartphone, CreditCard, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://movieticketbooking-h5u5.onrender.com');
 
 const SeatSelection = () => {
     const { showId } = useParams();

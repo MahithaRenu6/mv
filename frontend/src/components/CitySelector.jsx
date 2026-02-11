@@ -10,7 +10,7 @@ const CitySelector = () => {
     useEffect(() => {
         const fetchCities = async () => {
             try {
-                const res = await fetch('http://localhost:5000/api/cities');
+                const res = await fetch('https://movieticketbooking-h5u5.onrender.com/api/cities');
                 const data = await res.json();
                 setCities(data);
                 if (!selectedCity && data.length > 0) {
